@@ -1,0 +1,318 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  list-style: none;
+}
+
+body {
+  background-image: url(bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 120vh;
+  width: auto;
+  overflow-y: hidden;
+}
+
+/*navigation je všade rovnaký*/
+.navigation {
+  width: 400px;
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0.527);
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px;
+}
+
+.navigation ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 350px;
+}
+
+.navigation ul li {
+  position: relative;
+  list-style: none;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+
+.navigation ul li a {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.navigation ul li p {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.navigation ul li a {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.navigation ul li p {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  line-height: 75px;
+  font-size: 1.5em;
+  text-align: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: white;
+}
+
+.navigation ul li p .icon {
+  position: relative;
+  display: block;
+  line-height: 75px;
+  font-size: 1.5em;
+  text-align: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: white;
+}
+
+.navigation ul li:hover a .icon {
+  -webkit-transform: translateY(-35px);
+          transform: translateY(-35px);
+}
+
+.navigation ul li:hover p .icon {
+  -webkit-transform: translateY(-35px);
+          transform: translateY(-35px);
+}
+
+.navigation ul li a .text {
+  position: absolute;
+  color: white;
+  font-weight: 400px;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+}
+
+.navigation ul li p .text {
+  position: absolute;
+  color: white;
+  font-weight: 400px;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+}
+
+.navigation ul li:hover a .text {
+  opacity: 1;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+.navigation ul li:hover p .text {
+  opacity: 1;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  cursor: pointer;
+}
+
+/*dropdown*/
+.list1 {
+  position: absolute;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 6.25rem;
+  left: 6rem;
+  height: 8vh;
+  color: white;
+  text-decoration: none;
+}
+
+.list1 li:hover {
+  background-color: rgba(95, 95, 95, 0.527);
+}
+
+.list1 li {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.527);
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+button {
+  position: relative;
+  font-size: 3em;
+  height: 7vh;
+  color: black;
+  width: 100%;
+  background-color: rgba(117, 117, 117, 0.479);
+}
+
+h1 {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  font-size: 5vh;
+  width: 35vw;
+  margin-left: 32.5vw;
+  background-color: rgba(179, 179, 179, 0.445);
+}
+
+.galery {
+  min-width: 450px;
+}
+
+.logo {
+  height: 26vh;
+  margin-top: -15vh;
+  float: right;
+  width: auto;
+}
+
+.container {
+  margin-top: 10vh;
+  gap: 5vw;
+  margin-left: 2.5vw;
+  background-color: rgba(179, 179, 179, 0.445);
+  width: 30%;
+  height: auto;
+}
+
+.container p {
+  font-size: 3.8vh;
+  width: 17vw;
+  text-align: center;
+}
+
+.profilovka {
+  position: absolute;
+  height: 200px;
+  left: 0%;
+  margin-top: 10vh;
+  margin-left: 3rem;
+}
+
+.profil {
+  position: absolute;
+  margin-left: 7rem;
+  background-color: rgba(0, 0, 0, 0.527);
+  width: 200px;
+  margin-top: 2vh;
+  color: white;
+  padding: 10px;
+}
+
+.Matus_info {
+  width: 50vw;
+  margin: 10px;
+  margin-top: 20vh;
+  padding: 20px;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.527);
+  color: white;
+  min-width: 388px;
+  max-width: 388px;
+  border-radius: 5px;
+  text-align: left;
+  font-size: 1.2em;
+}
+
+.Matus_info h2 {
+  text-align: center;
+}
+
+b {
+  font-size: 1.5em;
+}
+/*# sourceMappingURL=creator.css.map */

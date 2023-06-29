@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="creator.css">
+    <script src="https://kit.fontawesome.com/0942e4bd22.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <title>Matúš Petričko</title>
+</head>
+
+<body>
+    <!--zas raz navigation-->
+    <div class="navigation">
+        <ul class="list1">
+            <li class="link1">Matúš Petričko</li>
+            <li class="link2">Peter Rothmajer</li>
+        </ul>
+        <ul>
+            <li class="list">
+                <a href="..//Main_page/main.html">
+                    <span class="icon">
+      <i class="fa-solid fa-house"></i>
+    </span>
+                    <span class="text">Home</span>
+                </a>
+            </li>
+            <li class="list">
+                <p>
+                    <span class="icon L1" onclick="L1()">
+      <i class="fa-solid fa-user"></i>
+    </span>
+                    <span class="text" onclick="L1()">Creators</span>
+                </p>
+
+            </li>
+            <li class="list">
+                <a href="..//Contats/contacts.html">
+                    <span class="icon l2">
+      <i class="fa-solid fa-message"></i>
+    </span>
+                    <span class="text">Contact</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="..//Photos/photos.html">
+                    <span class="icon l3">
+                        <i class="fa-solid fa-car"></i>
+    </span>
+                    <span class="text">Cars</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="..//Location/location.html">
+                    <span class="icon l4">
+      <i class="fa-solid fa-map-location-dot"></i>
+    </span>
+                    <span class="text">Location</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="Matus_info">
+        <H2>O mne</H2>
+        <!--unordered list-->
+        <ul>
+            <li><b>Škola</b> : Stredná elektrotechnická</li>
+            <li><b>Pôvod</b> : Slovensko/Košice/Šaca </li>
+            <li><b>Záľuby</b> : Programovanie, hry, športy</li>
+            <li><b>Jazyky</b> : HTML,CSS,PYTHON,JS,C</li>
+        </ul>
+    </div>
+    <h1 class="profil">Profilovka</h1>
+    <img src="matuš.jpg" alt="Profilovka" class="profilovka">
+</body>
+<script>
+    //https://www.youtube.com/watch?v=vKlq91Avgq8
+    var flick = "OFF"
+        //skript bol vysvetlený v maine
+    function L1() {
+        if (flick == "OFF") {
+            $(".list1 li").show();
+            flick = "ON";
+        } else {
+            $(".list1 li").hide();
+            flick = "OFF";
+        }
+        $('.list1 .link1').each(function() {
+            var link = $(this).html();
+            $(this).contents().wrap('<a href="../Matus/matus.html"></a>');
+        });
+        $('.list1 .link2').each(function() {
+            var link = $(this).html();
+            $(this).contents().wrap('<a href="../Peto/peto.html"></a>');
+        });
+    }
+</script>
+
+</html>

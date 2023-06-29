@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=,initial-scale=1.0">
+    <!--import ikoniek-->
+    <script src="https://kit.fontawesome.com/0942e4bd22.js" crossorigin="anonymous"></script>
+    <!--import jquery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css">
+    <title>R&P Cars</title>
+</head>
+
+<body>
+    <div class="navigation">
+        <!--listy ktorý sa zobrazí na klik-->
+        <ul class="list1">
+            <li class="link1">Matúš Petričko</li>
+            <li class="link2">Peter Rothmajer</li>
+        </ul>
+        <!--zaciatok samotného navigationu-->
+        <ul>
+            <li class="list">
+                <!--link na iné stránky-->
+                <a href="main.html">
+                    <!--ikonka-->
+                    <span class="icon">
+            <i class="fa-solid fa-house"></i>
+          </span>
+                    <span class="text">Home</span>
+                </a>
+            </li>
+            <!--rozklikatelný list na linky creators (pri kliknuti sa zobrazí classa list1)-->
+            <li class="list">
+                <p>
+                    <span class="icon L1" onclick="L1()">
+      <i class="fa-solid fa-user"></i>
+    </span>
+                    <span class="text" onclick="L1()">Creators</span>
+                </p>
+
+            </li>
+            <li class="list">
+                <a href="..//Contats/contacts.html">
+                    <span class="icon l2">
+            <i class="fa-solid fa-message"></i>
+          </span>
+                    <span class="text">Contact</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="..//Photos/photos.html">
+                    <span class="icon l3">
+                        <i class="fa-solid fa-car"></i>
+          </span>
+                    <span class="text">Cars</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="..//Location/location.html">
+                    <span class="icon l4">
+            <i class="fa-solid fa-map-location-dot"></i>
+          </span>
+                    <span class="text">Location</span>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+    <!--klikateľné logo-->
+    <a href="main.html"> <img src="porschee.png" alt="Porsche logo"></a>
+    <!--samotná stŕanka-->
+    <div class="nadpis">
+        <h1>R&P Cars</h1>
+        <h2>Porsche fan stránka</h2>
+    </div>
+</body>
+<script>
+    //https://www.youtube.com/watch?v=vKlq91Avgq8
+    var flick = "OFF"
+        //pri kliknutí sa podľa premennej flick rozhodne či sa má menu otvoriť/zavrieť, pri kliku sa menu otvorí a pri dalšom kliku sa zavrie
+
+    function L1() {
+        if (flick == "OFF") {
+            $(".list1 li").show();
+            flick = "ON";
+        } else {
+            $(".list1 li").hide();
+            flick = "OFF";
+        }
+        $('.list1 .link1').each(function() {
+            var link = $(this).html();
+            $(this).contents().wrap('<a href="../Matus/matus.html"></a>');
+        });
+        $('.list1 .link2').each(function() {
+            var link = $(this).html();
+            $(this).contents().wrap('<a href="../Peto/peto.html"></a>');
+        });
+    }
+</script>
+
+</html>

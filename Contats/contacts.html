@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=,initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0942e4bd22.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="contacts.css">
+    <title>Contacts</title>
+</head>
+
+<body>
+    <a href="..//Main_page/main.html"><img src="..//Main_page/porschee.png" alt="" class="logo"></a>
+    <!--navigation a klikatelné logo-->
+    <div class="navigation">
+        <ul class="list1">
+            <li class="link1">Matúš Petričko</li>
+            <li class="link2">Peter Rothmajer</li>
+        </ul>
+        <ul>
+            <li class="list">
+                <a href="..//Main_page/main.html">
+                    <span class="icon">
+          <i class="fa-solid fa-house"></i>
+        </span>
+                    <span class="text">Home</span>
+                </a>
+            </li>
+            <li class="list">
+                <p>
+                    <span class="icon L1" onclick="L1()">
+          <i class="fa-solid fa-user"></i>
+        </span>
+                    <span class="text" onclick="L1()">Creators</span>
+                </p>
+
+            </li>
+            <li class="list">
+                <a href="..//Contats/contacts.html">
+                    <span class="icon l2">
+          <i class="fa-solid fa-message"></i>
+        </span>
+                    <span class="text">Contact</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="..//Photos/photos.html">
+                    <span class="icon l3">
+                            <i class="fa-solid fa-car"></i>
+        </span>
+                    <span class="text">Cars</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="..//Location/location.html">
+                    <span class="icon l4">
+          <i class="fa-solid fa-map-location-dot"></i>
+        </span>
+                    <span class="text">Location</span>
+                </a>
+            </li>
+        </ul>
+        <!--gridom riešené kontakty-->
+    </div>
+    <h1>Kontakt na nás</h1>
+    <!--container je parent element pre karty-->
+    <div class="container">
+        <div class="kartaKontakt">
+            <h2>Osobne</h2>
+            <ul>
+                <li>Pobočka v Bratislave <br> Komenského 44</li>
+                <li>Pobočka v Košiciach <br> Komenského 44</li>
+            </ul>
+        </div>
+        <div class="kartaKontakt">
+            <h2>Telefón</h2>
+            <ul>
+                <li>Riaditeľstvo : 0912 345 678</li>
+                <li>Dodavateľ : 0923 456 789</li>
+                <li>Predajňa KE : 0934 567 890</li>
+                <li>Predajňa BA : 0945 678 901</li>
+            </ul>
+        </div>
+        <div class="kartaKontakt">
+            <h2>E-mail</h2>
+            <ul>
+                <li>Riaditeľstvo : porschesk@porsche.com</li>
+                <li>Dodavateľ : porsche@porsche.com</li>
+                <li>Predajňa KE : porscheke@porsche.com</li>
+                <li>Predajňa BA : porscheba@porsche.com </li>
+            </ul>
+        </div>
+    </div>
+    <!--footer s linkami na stránky tvorcov-->
+    <footer><a href="..//Peto/peto.html">Peter Rothmajer </a> &nbsp;& &nbsp; <a href="..//Matus/matus.html"> Matúš Petričko</a></footer>
+</body>
+
+
+<script>
+    //https://www.youtube.com/watch?v=vKlq91Avgq8
+    var flick = "OFF"
+
+    function L1() {
+        if (flick == "OFF") {
+            $(".list1 li").show();
+            flick = "ON";
+        } else {
+            $(".list1 li").hide();
+            flick = "OFF";
+        }
+        $('.list1 .link1').each(function() {
+            var link = $(this).html();
+            $(this).contents().wrap('<a href="../Matus/matus.html"></a>');
+        });
+        $('.list1 .link2').each(function() {
+            var link = $(this).html();
+            $(this).contents().wrap('<a href="../Peto/peto.html"></a>');
+        });
+    }
+</script>
+
+
+
+</html>
